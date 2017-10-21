@@ -1,5 +1,6 @@
 <?php
 class Config {
-    public static $x = 6114;
-    public static $chanel = '';
+    public static $x = 6000;
+    public static $channel = '#general';
+    public static $token = '';
 }
