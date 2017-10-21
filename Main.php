@@ -7,10 +7,8 @@
  */
 require_once 'config/Config.php';
 
-class Main
-{
-    public function __construct()
-    {
+class Main {
+    public function __construct() {
         $maxValue = Config::$x;
         $channel = Config::$channel;
         $value = $this->getData()->USD->last;
