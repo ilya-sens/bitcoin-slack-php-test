@@ -5,12 +5,15 @@
  * Date: 21.10.17
  * Time: 09:46
  */
+require_once 'config/Config.php';
 
 class Main
 {
     public function __construct()
     {
-        print $this->getData();
+        $value = Config::$x;
+        $chanel = Config::$chanel;
+        print($this->getData()->USD->last);
     }
 
     private function getData() {
@@ -19,7 +22,7 @@ class Main
         curl_setopt($ch, CURLOPT_HEADER, 0);
         $data = curl_exec($ch);
         curl_close($ch);
-        return $data;
+        return json_decode($data);
     }
 }
 
